@@ -40,4 +40,15 @@ export default {
   a {
     text-decoration: none;
   }
+  .slide-enter-active {
+    transition: all .3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-leave-to,
+  .slide-enter {
+    transform: translateX(10px);
+    opacity: 0;
+  }
 </style>
