@@ -2,8 +2,16 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <Skills />
-    <Links />
-    <Videos />
+    <transition name="slide">
+      <div v-if="showWeb" class="web">
+        <Links />    
+      </div>
+    </transition>
+    <transition name="slide">
+      <div v-if="showAnimation" class="animation">
+        <Videos />            
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -22,3 +30,14 @@ export default {
   }
 }
 </script>
+<style type="scss">
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+</style>

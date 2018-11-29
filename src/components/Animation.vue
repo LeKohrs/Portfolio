@@ -15,19 +15,22 @@ export default {
   data() {
     return {
       videos: [{
-        'name': 'Mobile Assistant',
-        'url': '',
+        'name': 'Leave the Elephant Behind | Mobile Assistant',
+        'url': 'https://youtu.be/f4g94OlEXxo',
         'tags': ['Animation', 'Sound Effects']
       },{
-        'name': 'Mobile Assistant',
-        'url': '',
+        'name': 'Elephant in the Room | Mobile Assistant',
+        'url': 'https://youtu.be/Aapd8ytYS2o',
         'tags': ['Animation', 'Sound Effects']
       },{
         'name': 'Building Regulation for Resilience Video | World Bank',
-        'url': '',
+        'url': 'https://www.youtube.com/watch?v=XMVLEnjzoAI',
         'tags': ['Character Animation']
       }]
     }
   }
 }
 </script>
+<style type="scss">
+  
+</style>
