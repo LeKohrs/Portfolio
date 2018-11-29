@@ -25,23 +25,6 @@ export default {
         'url': 'https://ezgo.txtsv.com',
         'tags': ['Front End', 'Back End'],
         'type': 'website'
-      }],
-      skills: {
-        'web': ['Vue.js', 'Javascript', 'ES6', 'Drupal'],
-        'Animation': ['After Effects', 'Illustrator', 'Gifs', 'Videos']
-      }, 
-      videos: [{
-        'name': 'Mobile Assistant',
-        'url': '',
-        'tags': ['Animation', 'Sound Effects']
-      },{
-        'name': 'Mobile Assistant',
-        'url': '',
-        'tags': ['Animation', 'Sound Effects']
-      },{
-        'name': 'Building Regulation for Resilience Video | World Bank',
-        'url': '',
-        'tags': ['Character Animation']
       }]
     }
   }
