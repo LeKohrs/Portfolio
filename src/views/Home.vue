@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <Logo />
-    <div class="toggle__btn" @click="toggleSkills"></div>
+    <div class="toggle__btn" @click="toggleSkills">
+      <div class="icon-container" :class="[{ web: showWeb }, { animation: showAnimation}]">
+        <Code />
+        <Play />      
+      </div>
+    </div>
     <Skills :showWeb="showWeb" :showAnimation="showAnimation"/>
     <transition name="slide">
       <div v-if="showWeb" class="web">
@@ -22,6 +27,8 @@ import Web from '@/components/Web.vue'
 import Videos from '@/components/Animation.vue'
 import Skills from  '@/components/Skills.vue'
 import Logo from  '@/components/svg/Logo.vue'
+import Play from '@/components/svg/Play.vue'
+import Code from '@/components/svg/Code.vue'
 
 export default {
   name: 'home',
@@ -35,7 +42,9 @@ export default {
     Web,
     Videos,
     Skills,
-    Logo
+    Logo,
+    Play,
+    Code
   },
   methods: {
     toggleSkills() {
@@ -51,7 +60,7 @@ export default {
   }
 }
 </script>
-<style type="scss">
+<style lang="scss">
   ul {
     padding: 0;
   }
@@ -71,10 +80,46 @@ export default {
     width: 75px;
     height: 30px;
     margin: 0 auto;
+    padding: 0 2px;
     border: 2px solid #222;
     border-radius: 20px;
     cursor: pointer;
+
+    .icon-container {
+      position: relative;
+      top: 50%;
+      width: 25px;
+      height: 25px;
+      border: 2px solid #222;
+      border-radius: 50%;
+      transform: translate(0, -50%) rotate(0deg);
+      transition: all .5s;
+
+      &.web {
+        .code,
+        .play {
+          transition: .5s;
+        }
+        .code {
+          opacity: 1;
+        }
+        .play {
+          opacity: 0;
+        }
+      }
+      &.animation {
+        transform: translate(45px, -50%) rotate(360deg);
+
+        .code {
+          opacity: 0;
+        }
+        .play {
+          opacity: 1;
+        }
+      }
+    }
   }
+ 
   .slide-enter-active {
     transition: all .3s ease;
   }
