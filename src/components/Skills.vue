@@ -20,6 +20,7 @@
 <script>
 export default {
   name: 'Skills',
+  props: ['showWeb', 'showAnimation'],
   data() {
     return {
       skills: {
