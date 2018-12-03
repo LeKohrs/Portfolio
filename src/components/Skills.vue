@@ -31,3 +31,36 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  .skills {
+
+    ul {
+      display: inline-flex;
+      flex-wrap: nowrap;
+
+      li {
+        position: relative;
+        margin-right: 15px;
+        font-size: 12px;
+
+        &:after {
+          content: '|';
+          position: absolute;
+          right: -10px;
+          top: 50%;
+          font-size: 17px;
+          opacity: .4;
+          transform: translateY(-50%);
+        }
+
+        &:last-child {
+          margin-right: 0;
+
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -27,15 +27,17 @@ export default {
 }
 </script>
 
-<style>
-  .st0{fill:none;stroke:#B2B2B2;stroke-width:11.1604;}
-  .st1{opacity:0;fill:#231F20;}
-  .st2{opacity:0;fill:none;stroke:#231F20;stroke-width:2.7946;stroke-linecap:round;stroke-miterlimit:10;}
-  .st3{opacity:0;fill:none;stroke:#231F20;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-  .st4{fill:#231F20;}
-  .st5{fill:none;stroke:#231F20;stroke-width:3.9405;}
+<style lang="scss">
+  
   .logo {
-    max-width: 200px;
-    margin: 0 auto;
+    max-width: 80px;
+    margin: 20px auto;
+
+    .st0{fill:none;stroke:#B2B2B2;stroke-width:11.1604;}
+    .st1{opacity:0;fill:#231F20;}
+    .st2{opacity:0;fill:none;stroke:#231F20;stroke-width:2.7946;stroke-linecap:round;stroke-miterlimit:10;}
+    .st3{opacity:0;fill:none;stroke:#231F20;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+    .st4{fill:#231F20;}
+    .st5{fill:none;stroke:#231F20;stroke-width:3.9405;}
   }
 </style>

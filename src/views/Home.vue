@@ -1,13 +1,18 @@
 <template>
   <div class="home">
     <Logo />
-    <div class="toggle__btn" @click="toggleSkills">
-      <div class="icon-container" :class="[{ web: showWeb }, { animation: showAnimation}]">
-        <Code />
-        <Play />      
+    <h1>Ryan Leichliter</h1> 
+    <Skills :showWeb="showWeb" :showAnimation="showAnimation"/>    
+    <div class="toggle">
+      <p>Web Sites</p>  
+      <div class="toggle__btn" @click="toggleSkills">
+        <div class="icon-container" :class="[{ web: showWeb }, { animation: showAnimation}]">
+          <Code />
+          <Play />      
+        </div>
       </div>
+      <p>Animation</p>    
     </div>
-    <Skills :showWeb="showWeb" :showAnimation="showAnimation"/>
     <transition name="slide">
       <div v-if="showWeb" class="web">
         <Web />    
@@ -61,6 +66,10 @@ export default {
 }
 </script>
 <style lang="scss">
+  h1 {
+    margin-bottom: 0;
+    font-size: 36px;
+  }
   ul {
     padding: 0;
   }
@@ -74,47 +83,60 @@ export default {
   .home {
     overflow: hidden;
   }
-  .toggle__btn {
-    display: block;
-    position: relative;
-    width: 75px;
-    height: 30px;
-    margin: 0 auto;
-    padding: 0 2px;
-    border: 2px solid #222;
-    border-radius: 20px;
-    cursor: pointer;
+  .toggle {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 220px;
+    margin: 0 auto 15px;
+    // transform: translateX(50px);
 
-    .icon-container {
+    p {
+      font-size: 10px;
+    }
+
+    .toggle__btn {
+      display: block;
       position: relative;
-      top: 50%;
-      width: 25px;
-      height: 25px;
-      border: 2px solid #222;
-      border-radius: 50%;
-      transform: translate(0, -50%) rotate(0deg);
-      transition: all .5s;
+      width: 75px;
+      height: 30px;
+      margin: 0 auto;
+      padding: 0 2px;
+      border: 1px solid #B2B4B7;
+      border-radius: 20px;
+      cursor: pointer;
 
-      &.web {
-        .code,
-        .play {
-          transition: .5s;
-        }
-        .code {
-          opacity: 1;
-        }
-        .play {
-          opacity: 0;
-        }
-      }
-      &.animation {
-        transform: translate(45px, -50%) rotate(360deg);
+      .icon-container {
+        position: relative;
+        top: 50%;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #B2B4B7;
+        border-radius: 50%;
+        transform: translate(0, -50%) rotate(0deg);
+        transition: all .5s;
 
-        .code {
-          opacity: 0;
+        &.web {
+          .code,
+          .play {
+            transition: .5s;
+          }
+          .code {
+            opacity: 1;
+          }
+          .play {
+            opacity: 0;
+          }
         }
-        .play {
-          opacity: 1;
+        &.animation {
+          transform: translate(45px, -50%) rotate(360deg);
+
+          .code {
+            opacity: 0;
+          }
+          .play {
+            opacity: 1;
+          }
         }
       }
     }
