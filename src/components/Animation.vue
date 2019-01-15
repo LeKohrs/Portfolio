@@ -2,7 +2,7 @@
   <div class="animations">
     <ul>
       <li v-for="(video, key) in videos" :key="key" class="video">
-        <a class="video__url" :href="video.url">{{ video.name }}</a>
+        <a class="video__url" :href="video.url" target="_blank">{{ video.name }}</a>
         <div class="roles">
           <p v-for="(tag, key) in video.tags" :key="key">{{ tag }}</p>        
         </div>
@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
   .video {
     margin-bottom: 15px;
+    text-align: left;
 
     &:last-child {
       margin-bottom: 0;

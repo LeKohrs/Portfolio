@@ -33,10 +33,17 @@ export default {
 </script>
 <style lang="scss">
   .skills {
+    position: relative;
+    height: 50px;
 
     ul {
+      position: absolute;
       display: inline-flex;
       flex-wrap: nowrap;
+      margin: 0;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
 
       li {
         position: relative;

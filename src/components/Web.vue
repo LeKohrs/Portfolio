@@ -2,7 +2,7 @@
   <div class="links">
     <ul>
       <li v-for="(link, key) in links" :key="key" class="link">
-        <a class="link__url" :href="link.url">{{ link.name }}</a>
+        <a class="link__url" :href="link.url" target="_blank">{{ link.name }}</a>
         <div class="roles">
           <p v-for="(tag, key) in link.tags" :key="key">{{ tag }}</p>  
         </div>
@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
   .link {
     margin-bottom: 15px;
+    text-align: left;
 
     &:last-child {
       margin-bottom: 0;

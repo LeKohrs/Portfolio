@@ -4,25 +4,27 @@
     <h1>Ryan Leichliter</h1> 
     <Skills :showWeb="showWeb" :showAnimation="showAnimation"/>    
     <div class="toggle">
-      <p>Web Sites</p>  
+      <p class="toggle__web" @click="selectWeb">Web Sites</p>  
       <div class="toggle__btn" @click="toggleSkills">
         <div class="icon-container" :class="[{ web: showWeb }, { animation: showAnimation}]">
           <Code />
           <Play />      
         </div>
       </div>
-      <p>Animation</p>    
+      <p class="toggle__animation" @click="selectAnimation">Animation</p>    
     </div>
-    <transition name="slide">
-      <div v-if="showWeb" class="web">
-        <Web />    
-      </div>
-    </transition>
-    <transition name="slide">
-      <div v-if="showAnimation" class="animation">
-        <Videos />            
-      </div>
-    </transition>
+    <div class="content">
+      <transition name="slide">
+        <div v-if="showWeb" class="web-container">
+          <Web />    
+        </div>
+      </transition>
+      <transition name="slide">
+        <div v-if="showAnimation" class="animation-container">
+          <Videos />            
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -61,6 +63,14 @@ export default {
         this.showWeb = true
         this.showAnimation = false
       }
+    },
+    selectWeb() {
+      this.showWeb = true
+      this.showAnimation = false
+    },
+    selectAnimation() {
+      this.showWeb = false
+      this.showAnimation = true
     }
   }
 }
@@ -83,6 +93,19 @@ export default {
   .home {
     overflow: hidden;
   }
+  .content {
+    position: relative;
+    max-width: 50%;
+    height: calc(100vh - 300px);
+    margin: 0 auto;
+  }
+  .web-container,
+  .animation-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 40px;
+  }
   .toggle {
     display: flex;
     align-items: center;
@@ -95,6 +118,10 @@ export default {
       font-size: 10px;
     }
 
+    &__animation,
+    &__web {
+      cursor: pointer;
+    }
     .toggle__btn {
       display: block;
       position: relative;
