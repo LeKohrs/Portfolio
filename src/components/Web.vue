@@ -18,7 +18,7 @@ export default {
     return {
       msg: 'hello there',
       links: [{
-        'name': 'Ride Over Everything',
+        'name': 'Ride Over Everything | Textron Off Road',
         'url': 'https://rideovereverything.com/',
         'tags': ['Front End', 'Back End'],
         'type': 'website'
@@ -36,7 +36,6 @@ export default {
 <style lang="scss">
   .link {
     margin-bottom: 15px;
-    text-align: left;
 
     &:last-child {
       margin-bottom: 0;

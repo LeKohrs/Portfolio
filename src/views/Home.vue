@@ -89,22 +89,29 @@ export default {
   a {
     text-decoration: none;
     color: #4580aa;
+    transition: .3s;
+
+    &:hover {
+      color: #2c3e50;
+    }
   }
   .home {
     overflow: hidden;
   }
   .content {
     position: relative;
-    max-width: 50%;
+    // max-width: 50%;
     height: calc(100vh - 300px);
-    margin: 0 auto;
+    // margin: 0 auto;
   }
   .web-container,
   .animation-container {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
     margin-top: 40px;
+    transform: translateX(-50%);
+    text-align: left;
   }
   .toggle {
     display: flex;
@@ -121,6 +128,11 @@ export default {
     &__animation,
     &__web {
       cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        color: #4580aa;
+      }
     }
     .toggle__btn {
       display: block;
@@ -132,6 +144,15 @@ export default {
       border: 1px solid #B2B4B7;
       border-radius: 20px;
       cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+       border: 1px solid #4580aa; 
+
+       & .icon-container {
+         border: 1px solid #4580aa;
+       }
+      }
 
       .icon-container {
         position: relative;

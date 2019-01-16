@@ -36,7 +36,6 @@ export default {
 <style lang="scss">
   .video {
     margin-bottom: 15px;
-    text-align: left;
 
     &:last-child {
       margin-bottom: 0;
