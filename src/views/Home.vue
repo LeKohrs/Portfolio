@@ -25,6 +25,13 @@
         </div>
       </transition>
     </div>
+    <!-- <div class="contact">
+      <p>Contact Me!</p>
+      <div class="contact__info">
+        <a href="mailto:ryan.leichliter@icloud.com" class="email">Email: ryan.leichliter@icloud.com</a>
+        <a href="https://www.linkedin.com/in/ryan-leichliter-04a73b78/" class="linked-in">Linkedin</a>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -42,7 +49,8 @@ export default {
   data() {
     return {
       showWeb: true,
-      showAnimation: false
+      showAnimation: false,
+      showContact: false,
     }
   },
   components: {
