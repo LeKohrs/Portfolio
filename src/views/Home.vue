@@ -25,13 +25,17 @@
         </div>
       </transition>
     </div>
-    <!-- <div class="contact">
+    <div class="contact">
       <p>Contact Me!</p>
       <div class="contact__info">
-        <a href="mailto:ryan.leichliter@icloud.com" class="email">Email: ryan.leichliter@icloud.com</a>
-        <a href="https://www.linkedin.com/in/ryan-leichliter-04a73b78/" class="linked-in">Linkedin</a>
+        <a href="mailto:ryan.leichliter@icloud.com" class="email">
+          <Email />
+        </a>
+        <a href="https://www.linkedin.com/in/ryan-leichliter-04a73b78/" class="linked-in" target="_blank">
+          <Linkedin />
+        </a>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -43,6 +47,8 @@ import Skills from  '@/components/Skills.vue'
 import Logo from  '@/components/svg/Logo.vue'
 import Play from '@/components/svg/Play.vue'
 import Code from '@/components/svg/Code.vue'
+import Email from '@/components/svg/Email.vue'
+import Linkedin from '@/components/svg/Linkedin.vue'
 
 export default {
   name: 'home',
@@ -59,7 +65,9 @@ export default {
     Skills,
     Logo,
     Play,
-    Code
+    Code,
+    Email,
+    Linkedin
   },
   methods: {
     toggleSkills() {
@@ -103,23 +111,34 @@ export default {
       color: #2c3e50;
     }
   }
+  p.link__url {
+    font-family: 'Gotham-Bold', Helvetica, Arial, sans-serif;
+    color: #4580aa;
+  }
   .home {
     overflow: hidden;
   }
   .content {
     position: relative;
     // max-width: 50%;
-    height: calc(100vh - 300px);
+    // height: calc(100vh - 367px);
     // margin: 0 auto;
   }
   .web-container,
   .animation-container {
-    position: absolute;
-    left: 50%;
-    top: 0;
+    // position: absolute;
+    // left: 50%;
+    // top: 0;
+    width: 60%;
+    max-width: 800px;
+    margin: 0 auto;
     margin-top: 40px;
-    transform: translateX(-50%);
+    // transform: translateX(-50%);
     text-align: left;
+  }
+  .description {
+    margin: 8px 0;
+    font-size: 13px;
   }
   .toggle {
     display: flex;
@@ -197,7 +216,33 @@ export default {
       }
     }
   }
- 
+  .contact__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .email {
+      &:hover {
+        svg {
+          .st0 {
+            stroke: #2c3e50;
+          }
+          .st1 {
+            fill: #2c3e50;
+          }
+        }
+      }
+    }
+    .linkedin {
+      &:hover {
+        svg {
+          .st0 {
+            fill: #2c3e50;
+          }
+        }
+      }
+    }
+  }
   .slide-enter-active {
     transition: all .3s ease;
   }
