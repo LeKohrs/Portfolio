@@ -110,34 +110,45 @@ export default {
     &:hover {
       color: #2c3e50;
     }
+
+    &.link__url {
+      color: #2c3e50;
+      text-align: center;
+      &:hover {
+        color: #4580aa;
+      }
+    }
   }
   p.link__url {
     font-family: 'Gotham-Bold', Helvetica, Arial, sans-serif;
-    color: #4580aa;
+    text-align: center;
+    color: #2c3e50;
   }
   .home {
     overflow: hidden;
   }
   .content {
     position: relative;
-    // max-width: 50%;
-    // height: calc(100vh - 367px);
-    // margin: 0 auto;
   }
   .web-container,
   .animation-container {
-    // position: absolute;
-    // left: 50%;
-    // top: 0;
-    width: 60%;
-    max-width: 800px;
+    width: 80%;
+    max-width: 1000px;
     margin: 0 auto;
     margin-top: 40px;
-    // transform: translateX(-50%);
     text-align: left;
   }
+  .links {
+    ul {  
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+  }
   .description {
-    margin: 8px 0;
+    margin: 8px auto;
+    max-width: 100%;
     font-size: 13px;
   }
   .toggle {
@@ -146,7 +157,6 @@ export default {
     flex-wrap: nowrap;
     max-width: 220px;
     margin: 0 auto 15px;
-    // transform: translateX(50px);
 
     p {
       font-size: 10px;
@@ -253,5 +263,32 @@ export default {
   .slide-enter {
     transform: translateX(10px);
     opacity: 0;
+  }
+  @media only screen and (max-width: 1200px) {
+    .web-container,
+    .animation-container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .links {
+      ul {  
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .link {
+          width: 100%;
+
+          a,
+          p {
+            max-width: 100%;
+          }
+        }
+      }
+    }
   }
 </style>

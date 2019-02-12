@@ -35,6 +35,8 @@ export default {
 </script>
 <style lang="scss">
   .video {
+    max-width: 600px;
+    margin: 0 auto;
     margin-bottom: 15px;
 
     &:last-child {
@@ -46,7 +48,7 @@ export default {
     }
   }
   .roles {
-    display: inline-flex;
+    display: flex;
     flex-wrap: nowrap;
     font-size: 12px;
 
