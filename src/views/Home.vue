@@ -31,11 +31,11 @@
         <a href="mailto:ryan.leichliter@icloud.com" class="email">
           <Email />
         </a>
-        <a href="https://www.linkedin.com/in/ryan-leichliter-04a73b78/" class="linked-in" target="_blank">
-          <Linkedin />
-        </a>
         <a href="https://github.com/LeKohrs" class="git" target="_blank">
           <Git />
+        </a>
+        <a href="https://www.linkedin.com/in/ryan-leichliter-04a73b78/" class="linked-in" target="_blank">
+          <Linkedin />
         </a>
       </div>
     </div>

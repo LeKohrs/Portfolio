@@ -16,6 +16,7 @@ export default {
 </script>
 <style lang="scss">
   .git{
+    margin-top: -2px;
     margin-left: 8px;
     width: 29px;
 

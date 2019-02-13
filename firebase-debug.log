@@ -1,0 +1,86 @@
+[debug] [2019-02-13T20:19:31.517Z] ----------------------------------------------------------------------
+[debug] [2019-02-13T20:19:31.519Z] Command:       /usr/local/Cellar/node/9.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2019-02-13T20:19:31.519Z] CLI Version:   6.2.2
+[debug] [2019-02-13T20:19:31.519Z] Platform:      darwin
+[debug] [2019-02-13T20:19:31.519Z] Node Version:  v9.5.0
+[debug] [2019-02-13T20:19:31.520Z] Time:          Wed Feb 13 2019 14:19:31 GMT-0600 (CST)
+[debug] [2019-02-13T20:19:31.520Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-02-13T20:19:31.530Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-02-13T20:19:31.530Z] > authorizing via signed-in user
+[debug] [2019-02-13T20:19:31.530Z] [iam] checking project ryan-s-portfolio for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-02-13T20:19:31.532Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/ryan-s-portfolio:testIamPermissions  
+
+[debug] [2019-02-13T20:19:31.814Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:31.815Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/ryan-s-portfolio  
+ 
+[debug] [2019-02-13T20:19:31.993Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ryan-s-portfolio'...
+[info] 
+[info] i  deploying firestore, functions, hosting
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-02-13T20:19:33.580Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/ryan-s-portfolio:test  
+
+[debug] [2019-02-13T20:19:33.729Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-02-13T20:19:33.731Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.1.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-02-13T20:19:33.732Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/ryan-s-portfolio?view=CONSUMER_VIEW  
+ 
+[debug] [2019-02-13T20:19:33.733Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/ryan-s-portfolio?view=CONSUMER_VIEW  
+ 
+[debug] [2019-02-13T20:19:34.445Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:34.468Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2019-02-13T20:19:34.469Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/ryan-s-portfolio  
+ 
+[debug] [2019-02-13T20:19:34.655Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:34.656Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/640427651858:getServerAppConfig  
+ 
+[debug] [2019-02-13T20:19:34.788Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:34.790Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ryan-s-portfolio/versions  
+
+[debug] [2019-02-13T20:19:35.467Z] <<< HTTP RESPONSE 200
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2019-02-13T20:19:35.470Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/ryan-s-portfolio/rulesets  
+
+[debug] [2019-02-13T20:19:35.470Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/ryan-s-portfolio/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2019-02-13T20:19:35.656Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:35.657Z] [rules] created ruleset projects/ryan-s-portfolio/rulesets/ca4759d4-c238-453d-8895-15a3bdc9b490
+[debug] [2019-02-13T20:19:35.725Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:35.726Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/ryan-s-portfolio/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2019-02-13T20:19:36.015Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2019-02-13T20:19:36.018Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/ryan-s-portfolio/configs  
+ 
+[debug] [2019-02-13T20:19:36.633Z] <<< HTTP RESPONSE 200
+[info] i  hosting[ryan-s-portfolio]: beginning deploy...
+[info] i  hosting[ryan-s-portfolio]: found 35 files in dist
+[debug] [2019-02-13T20:19:36.788Z] [hosting] hash cache [ZGlzdA] load error: lines is not defined
+[debug] [2019-02-13T20:19:36.933Z] [hosting] hash cache [ZGlzdA] stored for 35 files
+[debug] [2019-02-13T20:19:36.933Z] [hosting][hash queue][FINAL]
+[debug] [2019-02-13T20:19:36.933Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/ryan-s-portfolio/versions/7c11bc9ba27ab079:populateFiles  
+ <request body omitted>
+[debug] [2019-02-13T20:19:37.738Z] <<< HTTP RESPONSE 200
+[debug] [2019-02-13T20:19:37.749Z] [hosting][populate queue][FINAL]
+[debug] [2019-02-13T20:19:37.750Z] [hosting] uploads queued: 4

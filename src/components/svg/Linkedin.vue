@@ -22,8 +22,8 @@ export default {
 </script>
 <style lang="scss">
   .linkedin{
-    margin-left: 10px;
-    width: 27px;
+    margin-left: 8px;
+    width: 26px;
 
     svg {
         width: 100%;
