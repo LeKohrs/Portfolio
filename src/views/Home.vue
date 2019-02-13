@@ -34,6 +34,9 @@
         <a href="https://www.linkedin.com/in/ryan-leichliter-04a73b78/" class="linked-in" target="_blank">
           <Linkedin />
         </a>
+        <a href="https://github.com/LeKohrs" class="git" target="_blank">
+          <Git />
+        </a>
       </div>
     </div>
   </div>
@@ -49,6 +52,7 @@ import Play from '@/components/svg/Play.vue'
 import Code from '@/components/svg/Code.vue'
 import Email from '@/components/svg/Email.vue'
 import Linkedin from '@/components/svg/Linkedin.vue'
+import Git from '@/components/svg/Git.vue'
 
 export default {
   name: 'home',
@@ -67,7 +71,8 @@ export default {
     Play,
     Code,
     Email,
-    Linkedin
+    Linkedin,
+    Git,
   },
   methods: {
     toggleSkills() {
@@ -243,6 +248,7 @@ export default {
         }
       }
     }
+    .git,
     .linkedin {
       &:hover {
         svg {
