@@ -4,7 +4,7 @@
     <h1>Ryan Leichliter</h1> 
     <Skills :showWeb="showWeb" :showAnimation="showAnimation"/>    
     <div class="toggle">
-      <p class="toggle__web" @click="selectWeb">Web Sites</p>  
+      <p class="toggle__web" @click="selectWeb">Websites</p>  
       <div class="toggle__btn" @click="toggleSkills">
         <div class="icon-container" :class="[{ web: showWeb }, { animation: showAnimation}]">
           <Code />

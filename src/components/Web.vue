@@ -72,7 +72,7 @@ export default {
         'url': '',
         'tags': ['Front End', 'Back End', 'Drupal', 'Vue.js', 'Javascript'],
         'type': 'website',
-        'image': ''
+        'image': 'lobby'
       }
       ]
     }
